@@ -95,7 +95,7 @@ class RolesController extends Controller
     {
         $role = Role::findOrFail($id);
 
-        if($role->name == 'Admin')
+        if($role->name == 'Doctor')
         {
             return  response()->json(['success' => false , 'message' => "Cant delete Admin"]);
         }

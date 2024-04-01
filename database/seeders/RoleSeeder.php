@@ -13,23 +13,23 @@ class RoleSeeder extends Seeder
      */
     public function run(): void
     {
-        $admin = Role::create(['name' => 'Admin']);
+        $doctor = Role::create(['name' => 'Doctor']);
 
-        $editor = Role::create(['name' => 'Editor']);
+        $reception = Role::create(['name' => 'Reception']);
 
-        $admin->givePermissionTo([
+        $doctor->givePermissionTo([
             'create-role',
             'update-role',
             'delete-role',
-            'create-user',
-            'update-user',
-            'delete-user',
+            'create-reception',
+            'update-reception',
+            'delete-reception',
         ]);
 
-        $editor->givePermissionTo([
-            'create-user',
-            'update-user',
-            'delete-user',
+        $reception->givePermissionTo([
+            'create-reception',
+            'update-reception',
+            'delete-reception',
         ]);
 
     }
